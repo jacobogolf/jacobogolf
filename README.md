@@ -1,14 +1,7 @@
-# Jacobo Gabeiras — GitHub Pages
+# JG Golf v2
+Upload everything in this folder to the root of the `jacobogolf` GitHub repository.
 
-Personal research and professional portfolio.
-
-## Structure
-
-- `index.html` — website
-- `assets/images/` — profile and research imagery
-- `assets/sports/` — personal interest photography
-- `assets/video/` — Grenoble numerical-model visualisation
-- `assets/docs/` — downloadable CV
-- `assets/css/`, `assets/js/` — reserved static assets
-
-Published with GitHub Pages.
+Still to connect:
+- exact Instagram profile URL
+- finished Tally swing-upload/payment form
+- €150/month Stripe subscription
