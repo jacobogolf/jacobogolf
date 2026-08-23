@@ -1,10 +1,14 @@
-# JG Golf
+# Jacobo Gabeiras — GitHub Pages
 
-Static landing page for GitHub Pages.
+Personal research and professional portfolio.
 
 ## Structure
-- `index.html` — website
-- `assets/images/logo.jpeg` — JG logo
-- `assets/video/driver-positions.mp4` — compressed hero video
-- `assets/video/dtl-faceon.mp4` — filming-guide video
 
+- `index.html` — website
+- `assets/images/` — profile and research imagery
+- `assets/sports/` — personal interest photography
+- `assets/video/` — Grenoble numerical-model visualisation
+- `assets/docs/` — downloadable CV
+- `assets/css/`, `assets/js/` — reserved static assets
+
+Published with GitHub Pages.
