@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07100b"><title>JG Golf — Coaching & Swing Analysis</title><meta name="description" content="Golf coaching and personalised swing analysis with Jacobo Gabeiras.">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07100b"><title>Jacobo Golf — Coaching & Swing Analysis</title><meta name="description" content="Golf coaching and personalised swing analysis with Jacobo Gabeiras.">
 <style>
 :root{--bg:#07100b;--panel:#0d1811;--panel2:#122019;--text:#f6f7f3;--muted:#a8b4aa;--line:rgba(255,255,255,.12);--lime:#c9ff58;--green:#78e09a;--max:1240px;--r:30px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}.wrap{width:min(calc(100% - 42px),var(--max));margin:auto}.ambient{position:fixed;inset:0;z-index:-2;background:radial-gradient(900px 600px at 85% 5%,rgba(201,255,88,.13),transparent 65%),radial-gradient(800px 600px at 0 70%,rgba(120,224,154,.08),transparent 70%)}.grid{position:fixed;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:58px 58px;mask-image:linear-gradient(#000,transparent 90%)}
 nav{position:fixed;z-index:20;top:18px;left:50%;transform:translateX(-50%);width:min(calc(100% - 28px),1280px);display:flex;align-items:center;justify-content:space-between;padding:10px 12px 10px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(7,16,11,.72);backdrop-filter:blur(18px)}.brand{display:flex;align-items:center;gap:10px;font-weight:900}.brand img{width:30px;height:30px;border-radius:50%;object-fit:cover;filter:invert(1)}.links{display:flex;gap:24px;color:#bcc7bd;font-size:.78rem}.pill,.btn{border-radius:999px;padding:12px 17px;font-weight:850;font-size:.78rem;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;gap:8px}.pill{background:#f5f7f3;color:#07100b}.btn.primary{background:var(--lime);color:#07100b;border-color:transparent}.btn:hover,.pill:hover{transform:translateY(-2px)}
@@ -16,8 +16,65 @@ nav{position:fixed;z-index:20;top:18px;left:50%;transform:translateX(-50%);width
 .trackman-data{display:flex;gap:7px;flex-wrap:wrap;margin:4px 0 22px}
 .trackman-data span{font-size:.59rem;letter-spacing:.08em;border:1px solid rgba(201,255,88,.18);border-radius:999px;padding:7px 9px;color:#d8f4a5}
 @media(max-width:900px){.service-group{grid-template-columns:1fr}}
+
+/* v4: mobile-first refinements, brand menu, real before/after */
+.nav{position:relative}
+.brand{cursor:pointer;background:none;border:0;color:inherit;font:inherit;padding:0}
+.brand-chevron{font-size:.66rem;color:#7f8ca0;transition:transform .2s}
+.brand[aria-expanded="true"] .brand-chevron{transform:rotate(180deg)}
+.brand-menu{position:absolute;top:58px;left:14px;min-width:235px;padding:9px;border:1px solid var(--line);border-radius:18px;background:rgba(8,11,18,.97);backdrop-filter:blur(22px);box-shadow:0 24px 60px rgba(0,0,0,.42);opacity:0;visibility:hidden;transform:translateY(-7px);transition:.2s ease}
+.brand-menu.open{opacity:1;visibility:visible;transform:none}
+.brand-menu a{display:flex;justify-content:space-between;gap:20px;padding:11px 12px;border-radius:12px;color:#b9c4d3;font-size:.75rem;font-weight:750}
+.brand-menu a:hover{background:rgba(255,255,255,.055);color:white}
+.brand-menu small{color:#64738a;font-size:.57rem;text-transform:uppercase;letter-spacing:.09em}
+
+.transformations{display:grid;gap:18px}
+.transformation{border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:linear-gradient(155deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}
+.transformation-head{display:flex;justify-content:space-between;align-items:flex-end;gap:22px;margin-bottom:22px}
+.transformation-head h3{font-size:clamp(2rem,4vw,4rem);line-height:.95;letter-spacing:-.05em;margin:8px 0 0}
+.transformation-head p{max-width:500px;color:#8e9bad;line-height:1.6;margin:0}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ba-video{position:relative;overflow:hidden;border-radius:22px;background:#05070b;border:1px solid rgba(255,255,255,.08)}
+.ba-video video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;background:#05070b}
+.ba-label{position:absolute;z-index:2;top:12px;left:12px;padding:7px 10px;border-radius:999px;background:rgba(7,10,16,.72);backdrop-filter:blur(12px);font-size:.62rem;font-weight:850;text-transform:uppercase;letter-spacing:.1em}
+.ba-label.after{color:var(--lime)}
+
+@media(max-width:980px){
+  .nav-wrap{top:10px;padding:0 10px}.nav{padding:9px 10px 9px 14px}.nav-links{display:none}.cv-btn{padding:9px 12px}
+  .hero{min-height:auto;grid-template-columns:1fr;padding:116px 0 52px;gap:22px}
+  .portrait-wrap{min-height:0}.portrait{width:100%;max-width:500px;aspect-ratio:4/5;border-radius:28px}
+  .section{padding:76px 0}.section-head{margin-bottom:35px}.focus-line{margin:-5px 0 38px}
+  .service-group{margin-top:22px;padding-top:28px;gap:9px}
+  .services{grid-template-columns:1fr!important}
+  .card{grid-column:auto!important;min-height:0!important;padding:26px!important}
+  .card .btn{position:static!important;margin-top:20px}.checks{margin-bottom:8px!important}
+  .research-card{min-height:0}.research-card h3{margin:36px 0 10px}
+  .footer{padding-top:75px}
+}
+@media(max-width:620px){
+  .wrap{width:min(calc(100% - 24px),var(--max))}
+  .brand{font-size:.86rem}.cv-btn{font-size:.66rem}
+  .brand-menu{position:fixed;top:68px;left:10px;right:10px;min-width:0}
+  .hero h1{font-size:clamp(3.05rem,16vw,5.05rem);line-height:.84;margin:18px 0 20px}
+  .hero-intro{font-size:.97rem;line-height:1.6}.hero-meta{display:none}
+  .actions{gap:8px}.btn{padding:12px 14px}
+  .portrait-wrap{margin-top:6px}.portrait{width:100%;aspect-ratio:4/5;object-position:center}
+  .f1{top:12px;left:10px}.f2{right:10px;bottom:14px}.float-card{padding:10px 12px;border-radius:14px}
+  .section-title,.head h2{font-size:clamp(2.7rem,13vw,4.4rem)!important}
+  .section-index,.index{font-size:.6rem}
+  .service-group{display:block}.service-group h3{font-size:2.3rem;margin-top:8px}
+  .card{margin-top:12px;border-radius:24px}.card h3{font-size:2.35rem!important}
+  .card p{font-size:.93rem;line-height:1.58}.checks li{font-size:.87rem;line-height:1.45}
+  .price{font-size:3.6rem!important}.trackman-data{gap:5px}.trackman-data span{font-size:.52rem;padding:6px 8px}
+  .research-grid{grid-template-columns:1fr!important}.video-guide{border-radius:22px}
+  .transformation{padding:17px;border-radius:24px}.transformation-head{display:block;margin-bottom:15px}
+  .transformation-head h3{font-size:2.55rem}.transformation-head p{margin-top:10px;font-size:.88rem}
+  .ba-grid{gap:7px}.ba-video{border-radius:15px}.ba-label{top:7px;left:7px;padding:5px 7px;font-size:.52rem}
+  .footer h2{font-size:clamp(3rem,15vw,5.5rem)}.footer-bottom{margin-top:45px}
+}
+
 </style></head><body><div class="ambient"></div><div class="grid"></div>
-<nav><a class="brand" href="#top"><img src="assets/images/logo.jpeg" alt="JG">JG GOLF</a><div class="links"><a href="#coaching">Online coaching</a><a href="#inperson">In person</a><a href="#analysis">How it works</a></div><a class="pill" href="https://www.instagram.com/" target="_blank">Message me ↗</a></nav>
+<nav><a class="brand" href="#top"><img src="assets/images/logo.jpeg" alt="JG">Jacobo Golf</a><div class="links"><a href="#coaching">Online coaching</a><a href="#inperson">In person</a><a href="#analysis">How it works</a></div><a class="pill" href="https://www.instagram.com/" target="_blank">Message me ↗</a></nav>
 <main id="top"><section class="hero wrap"><div class="reveal"><div class="eyebrow">Golf coaching · Personalised swing analysis</div><h1>Understand<span>your swing.</span><em>Play better.</em></h1><p>I don't want to patch one position at a time. I want to find the root cause of your miss, explain why it's happening, and give you a clear way to change it.</p><div class="actions"><a class="btn primary" href="#coaching">Work with me →</a><a class="btn" href="#analysis">See how it works</a></div></div><div class="hero-media reveal"><div class="phone"><video autoplay muted loop playsinline preload="metadata"><source src="assets/video/driver-positions.mp4" type="video/mp4"></video></div><div class="badge b1"><small>Focus</small><b>Root cause</b></div><div class="badge b2"><small>Then</small><b>Simple drills</b></div></div></section>
 <section id="coaching" class="section wrap"><div class="head reveal"><div class="index">01 — Coaching</div><h2>Choose how you want to <em>improve.</em></h2></div><div class="services">
 
@@ -36,5 +93,36 @@ nav{position:fixed;z-index:20;top:18px;left:50%;transform:translateX(-50%);width
 </div></section>
 <section id="analysis" class="section wrap"><div class="head reveal"><div class="index">02 — Swing analysis</div><h2>Two angles. One clear <em>plan.</em></h2></div><div class="analysis"><div class="guide reveal"><video autoplay muted loop playsinline preload="metadata" aria-label="Face-on and down-the-line filming guide"><source src="assets/video/dtl-faceon.mp4" type="video/mp4"></video></div><div class="deliver reveal"><div class="kicker">What to send · What you receive</div><h3>Film it right. I’ll do the rest.</h3><div class="step"><b>01</b><div><h4>Down the line</h4><p>Slow motion, camera at hand height, around 3–4 metres away, pointing towards your hands at address. Full body and club visible throughout.</p></div></div><div class="step"><b>02</b><div><h4>Face on</h4><p>Slow motion, camera at hand height, around 3–4 metres away. Full body and the complete swing visible.</p></div></div><div class="step"><b>03</b><div><h4>Your analysis</h4><p>You receive a personalised video going through your swing step by step and explaining the root cause behind the problem you are seeing.</p></div></div><div class="step"><b>04</b><div><h4>Your drills</h4><p>You receive a second video of me demonstrating what to do with your body and club, plus the drills I want you to use in your next practice sessions.</p></div></div><div class="quote">Before payment, I check that your videos are good enough to analyse. Once everything is clear, you complete payment and I get to work.</div><div class="actions"><a class="btn primary" href="#" data-placeholder="tally">Upload my swing →</a><a class="btn" href="https://www.instagram.com/reel/DbYfWAgsVIc/" target="_blank">Watch swing positions ↗</a></div></div></div></section>
 
-<footer class="footer wrap reveal"><h2>Want me to look at<span>your swing?</span></h2><p>For in-person lessons, message me and we'll arrange it directly. For online analysis, send the two angles above and tell me what you're struggling with.</p><div class="actions"><a class="btn primary" href="#analysis">Send my swing →</a><a class="btn" href="https://www.instagram.com/" target="_blank">Message me on Instagram ↗</a></div><div class="bottom"><span>JG Golf · 2026</span><span>Coaching · Swing analysis · Better golf</span></div></footer></main>
-<script>const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.1});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));</script></body></html>
+
+<section id="results" class="section wrap">
+  <div class="section-head reveal"><div class="section-index">03 — Real changes</div><h2 class="section-title">Before. After. <em>Better movement.</em></h2></div>
+  <p class="focus-line reveal">Two real examples from players I’ve worked with. Not posed positions — just the swing before and after working on the movement that was actually driving the pattern.</p>
+  <div class="transformations">
+    <article class="transformation reveal">
+      <div class="transformation-head"><div><div class="project-kicker">Player transformation</div><h3>Marina</h3></div><p>A real before and after from the coaching process.</p></div>
+      <div class="ba-grid">
+        <div class="ba-video"><span class="ba-label">Before</span><video muted loop playsinline controls preload="metadata"><source src="assets/video/marina_before.mp4" type="video/mp4"></video></div>
+        <div class="ba-video"><span class="ba-label after">After</span><video muted loop playsinline controls preload="metadata"><source src="assets/video/marina_after.mp4" type="video/mp4"></video></div>
+      </div>
+    </article>
+    <article class="transformation reveal">
+      <div class="transformation-head"><div><div class="project-kicker">Player transformation</div><h3>Tarsha</h3></div><p>A real before and after from the coaching process.</p></div>
+      <div class="ba-grid">
+        <div class="ba-video"><span class="ba-label">Before</span><video muted loop playsinline controls preload="metadata"><source src="assets/video/tarsha_before.mp4" type="video/mp4"></video></div>
+        <div class="ba-video"><span class="ba-label after">After</span><video muted loop playsinline controls preload="metadata"><source src="assets/video/tarsha_after.mp4" type="video/mp4"></video></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<footer class="footer wrap reveal"><h2>Want me to look at<span>your swing?</span></h2><p>For in-person lessons, message me and we'll arrange it directly. For online analysis, send the two angles above and tell me what you're struggling with.</p><div class="actions"><a class="btn primary" href="#analysis">Send my swing →</a><a class="btn" href="https://www.instagram.com/" target="_blank">Message me on Instagram ↗</a></div><div class="bottom"><span>Jacobo Golf · 2026</span><span>Coaching · Swing analysis · Better golf</span></div></footer></main>
+<script>const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.1});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+const brandToggle=document.getElementById('brandToggle'),brandMenu=document.getElementById('brandMenu');
+if(brandToggle&&brandMenu){
+ const closeMenu=()=>{brandMenu.classList.remove('open');brandToggle.setAttribute('aria-expanded','false')};
+ brandToggle.addEventListener('click',e=>{e.stopPropagation();const isOpen=brandMenu.classList.toggle('open');brandToggle.setAttribute('aria-expanded',isOpen?'true':'false')});
+ brandMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+ document.addEventListener('click',e=>{if(!brandMenu.contains(e.target)&&!brandToggle.contains(e.target))closeMenu()});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+}
+</script></body></html>
