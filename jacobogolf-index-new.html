@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07100b"><title>Jacobo Golf — Coaching & Swing Analysis</title><meta name="description" content="Golf coaching and personalised swing analysis with Jacobo Gabeiras.">
+<style>
+:root{--bg:#07100b;--panel:#0d1811;--panel2:#122019;--text:#f6f7f3;--muted:#a8b4aa;--line:rgba(255,255,255,.12);--lime:#c9ff58;--green:#78e09a;--max:1240px;--r:30px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}.wrap{width:min(calc(100% - 42px),var(--max));margin:auto}.ambient{position:fixed;inset:0;z-index:-2;background:radial-gradient(900px 600px at 85% 5%,rgba(201,255,88,.13),transparent 65%),radial-gradient(800px 600px at 0 70%,rgba(120,224,154,.08),transparent 70%)}.grid{position:fixed;inset:0;z-index:-1;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:58px 58px;mask-image:linear-gradient(#000,transparent 90%)}
+nav{position:fixed;z-index:20;top:18px;left:50%;transform:translateX(-50%);width:min(calc(100% - 28px),1280px);display:flex;align-items:center;justify-content:space-between;padding:10px 12px 10px 16px;border:1px solid var(--line);border-radius:999px;background:rgba(7,16,11,.72);backdrop-filter:blur(18px)}.brand{display:flex;align-items:center;gap:10px;font-weight:900}.brand img{width:30px;height:30px;border-radius:50%;object-fit:cover;filter:invert(1)}.links{display:flex;gap:24px;color:#bcc7bd;font-size:.78rem}.pill,.btn{border-radius:999px;padding:12px 17px;font-weight:850;font-size:.78rem;border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;gap:8px}.pill{background:#f5f7f3;color:#07100b}.btn.primary{background:var(--lime);color:#07100b;border-color:transparent}.btn:hover,.pill:hover{transform:translateY(-2px)}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;padding:130px 0 75px}.eyebrow{font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:#b8c5ba;font-weight:800}.hero h1{font-size:clamp(4.5rem,9vw,9.5rem);line-height:.82;letter-spacing:-.075em;margin:22px 0 26px}.hero h1 span{display:block;color:transparent;-webkit-text-stroke:1.2px rgba(255,255,255,.55)}.hero h1 em{display:block;color:var(--lime);font-style:normal}.hero p{font-size:clamp(1rem,1.5vw,1.22rem);line-height:1.7;color:var(--muted);max-width:650px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.hero-media{position:relative;height:700px;display:flex;justify-content:center}.phone{height:100%;aspect-ratio:512/910;border-radius:42px;overflow:hidden;border:1px solid rgba(255,255,255,.15);box-shadow:0 55px 120px rgba(0,0,0,.5);transform:rotate(2deg);background:#000}.phone video{width:100%;height:100%;object-fit:cover}.badge{position:absolute;background:rgba(7,16,11,.76);border:1px solid var(--line);backdrop-filter:blur(14px);border-radius:18px;padding:13px 16px}.badge b{display:block;font-size:1.15rem}.badge small{color:#91a096}.b1{left:0;top:15%}.b2{right:0;bottom:17%}.section{padding:120px 0}.head{display:grid;grid-template-columns:.28fr 1fr;gap:30px;align-items:end;margin-bottom:52px}.index{font-size:.67rem;color:#6f8072;text-transform:uppercase;letter-spacing:.14em}.head h2{font-size:clamp(3.2rem,6vw,6.5rem);line-height:.9;letter-spacing:-.06em;margin:0}.head h2 em{font-family:Georgia,serif;font-weight:400;color:var(--lime)}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{border:1px solid var(--line);border-radius:var(--r);padding:30px;background:linear-gradient(150deg,rgba(255,255,255,.055),rgba(255,255,255,.018));min-height:520px;position:relative;display:flex;flex-direction:column}.card.featured{background:radial-gradient(circle at 80% 15%,rgba(201,255,88,.12),transparent 30%),linear-gradient(150deg,#132117,#0a140e)}.kicker{font-size:.65rem;text-transform:uppercase;letter-spacing:.13em;color:#829486}.price{font-size:clamp(3.1rem,5vw,5.3rem);font-weight:900;letter-spacing:-.06em;margin:38px 0 2px}.price small{font-size:.9rem;color:#829486;letter-spacing:0}.card h3{font-size:2rem;letter-spacing:-.04em;margin:10px 0}.card p{color:var(--muted);line-height:1.65}.checks{list-style:none;padding:0;margin:20px 0 28px;color:#c4cec6;font-size:.9rem}.checks li{margin:10px 0}.checks li:before{content:"↗";color:var(--lime);margin-right:10px}.card .btn{margin-top:auto;width:fit-content}.note{font-size:.7rem!important;color:#738077!important;margin-top:12px!important}
+.analysis{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px}.guide,.deliver{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:rgba(255,255,255,.025)}.guide video{width:100%;height:100%;min-height:610px;object-fit:cover;display:block;background:#000}.deliver{padding:38px}.deliver h3{font-size:clamp(2.5rem,4vw,4.5rem);line-height:.95;letter-spacing:-.055em;margin:10px 0 28px}.step{padding:22px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:42px 1fr;gap:15px}.step b{color:var(--lime)}.step h4{margin:0 0 6px;font-size:1.1rem}.step p{margin:0;color:var(--muted);line-height:1.55}.quote{margin-top:26px;padding:20px;border-radius:18px;background:rgba(201,255,88,.07);color:#c9d3ca;line-height:1.55}.proof{display:grid;grid-template-columns:1fr 1fr;gap:18px}.proof-card{border:1px solid var(--line);border-radius:var(--r);padding:36px;background:rgba(255,255,255,.025)}.proof-card h3{font-size:clamp(2.2rem,4vw,4rem);letter-spacing:-.05em;margin:0 0 18px}.proof-card p{color:var(--muted);line-height:1.7}.coming{display:grid;place-items:center;min-height:360px;border-style:dashed;color:#78877a;text-align:center}.footer{padding:100px 0 35px}.footer h2{font-size:clamp(4rem,8vw,8.5rem);line-height:.84;letter-spacing:-.07em;margin:0}.footer h2 span{display:block;color:var(--lime)}.footer p{color:var(--muted);max-width:620px;line-height:1.7}.bottom{margin-top:60px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:#637065;font-size:.65rem;text-transform:uppercase;letter-spacing:.08em}.reveal{opacity:0;transform:translateY(22px);transition:.65s}.reveal.on{opacity:1;transform:none}
+@media(max-width:900px){.links{display:none}.hero{grid-template-columns:1fr}.hero-media{height:590px}.services{grid-template-columns:1fr}.card{min-height:auto}.analysis,.proof{grid-template-columns:1fr}.head{grid-template-columns:1fr}.guide img{min-height:0}.section{padding:90px 0}}@media(max-width:560px){.wrap{width:min(calc(100% - 26px),var(--max))}.hero h1{font-size:17vw}.hero-media{height:510px}.badge{display:none}.head h2{font-size:13vw}.deliver{padding:26px}.card{padding:25px}.bottom{flex-direction:column;gap:8px}}
+
+.service-group{grid-column:1/-1;margin:34px 0 0;padding-top:38px;border-top:1px solid var(--line);display:grid;grid-template-columns:.28fr 1fr;gap:30px;align-items:end}
+.service-group:first-child{margin-top:0;padding-top:0;border-top:0}
+.service-group .label{font-size:.67rem;color:#6f8072;text-transform:uppercase;letter-spacing:.14em}
+.service-group h3{font-size:clamp(2rem,3.7vw,4rem);line-height:.95;letter-spacing:-.05em;margin:0}
+.service-group h3 em{font-family:Georgia,serif;font-weight:400;color:var(--lime)}
+.trackman-data{display:flex;gap:7px;flex-wrap:wrap;margin:4px 0 22px}
+.trackman-data span{font-size:.59rem;letter-spacing:.08em;border:1px solid rgba(201,255,88,.18);border-radius:999px;padding:7px 9px;color:#d8f4a5}
+@media(max-width:900px){.service-group{grid-template-columns:1fr}}
+
+/* v4: mobile-first refinements, brand menu, real before/after */
+.nav{position:relative}
+.brand{cursor:pointer;background:none;border:0;color:inherit;font:inherit;padding:0}
+.brand-chevron{font-size:.66rem;color:#7f8ca0;transition:transform .2s}
+.brand[aria-expanded="true"] .brand-chevron{transform:rotate(180deg)}
+.brand-menu{position:absolute;top:58px;left:14px;min-width:235px;padding:9px;border:1px solid var(--line);border-radius:18px;background:rgba(8,11,18,.97);backdrop-filter:blur(22px);box-shadow:0 24px 60px rgba(0,0,0,.42);opacity:0;visibility:hidden;transform:translateY(-7px);transition:.2s ease}
+.brand-menu.open{opacity:1;visibility:visible;transform:none}
+.brand-menu a{display:flex;justify-content:space-between;gap:20px;padding:11px 12px;border-radius:12px;color:#b9c4d3;font-size:.75rem;font-weight:750}
+.brand-menu a:hover{background:rgba(255,255,255,.055);color:white}
+.brand-menu small{color:#64738a;font-size:.57rem;text-transform:uppercase;letter-spacing:.09em}
+
+.transformations{display:grid;gap:18px}
+.transformation{border:1px solid var(--line);border-radius:var(--radius);padding:30px;background:linear-gradient(155deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}
+.transformation-head{display:flex;justify-content:space-between;align-items:flex-end;gap:22px;margin-bottom:22px}
+.transformation-head h3{font-size:clamp(2rem,4vw,4rem);line-height:.95;letter-spacing:-.05em;margin:8px 0 0}
+.transformation-head p{max-width:500px;color:#8e9bad;line-height:1.6;margin:0}
+.ba-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.ba-video{position:relative;overflow:hidden;border-radius:22px;background:#05070b;border:1px solid rgba(255,255,255,.08)}
+.ba-video video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;background:#05070b}
+.ba-label{position:absolute;z-index:2;top:12px;left:12px;padding:7px 10px;border-radius:999px;background:rgba(7,10,16,.72);backdrop-filter:blur(12px);font-size:.62rem;font-weight:850;text-transform:uppercase;letter-spacing:.1em}
+.ba-label.after{color:var(--lime)}
+
+@media(max-width:980px){
+  .nav-wrap{top:10px;padding:0 10px}.nav{padding:9px 10px 9px 14px}.nav-links{display:none}.cv-btn{padding:9px 12px}
+  .hero{min-height:auto;grid-template-columns:1fr;padding:116px 0 52px;gap:22px}
+  .portrait-wrap{min-height:0}.portrait{width:100%;max-width:500px;aspect-ratio:4/5;border-radius:28px}
+  .section{padding:76px 0}.section-head{margin-bottom:35px}.focus-line{margin:-5px 0 38px}
+  .service-group{margin-top:22px;padding-top:28px;gap:9px}
+  .services{grid-template-columns:1fr!important}
+  .card{grid-column:auto!important;min-height:0!important;padding:26px!important}
+  .card .btn{position:static!important;margin-top:20px}.checks{margin-bottom:8px!important}
+  .research-card{min-height:0}.research-card h3{margin:36px 0 10px}
+  .footer{padding-top:75px}
+}
+@media(max-width:620px){
+  .wrap{width:min(calc(100% - 24px),var(--max))}
+  .brand{font-size:.86rem}.cv-btn{font-size:.66rem}
+  .brand-menu{position:fixed;top:68px;left:10px;right:10px;min-width:0}
+  .hero h1{font-size:clamp(3.05rem,16vw,5.05rem);line-height:.84;margin:18px 0 20px}
+  .hero-intro{font-size:.97rem;line-height:1.6}.hero-meta{display:none}
+  .actions{gap:8px}.btn{padding:12px 14px}
+  .portrait-wrap{margin-top:6px}.portrait{width:100%;aspect-ratio:4/5;object-position:center}
+  .f1{top:12px;left:10px}.f2{right:10px;bottom:14px}.float-card{padding:10px 12px;border-radius:14px}
+  .section-title,.head h2{font-size:clamp(2.7rem,13vw,4.4rem)!important}
+  .section-index,.index{font-size:.6rem}
+  .service-group{display:block}.service-group h3{font-size:2.3rem;margin-top:8px}
+  .card{margin-top:12px;border-radius:24px}.card h3{font-size:2.35rem!important}
+  .card p{font-size:.93rem;line-height:1.58}.checks li{font-size:.87rem;line-height:1.45}
+  .price{font-size:3.6rem!important}.trackman-data{gap:5px}.trackman-data span{font-size:.52rem;padding:6px 8px}
+  .research-grid{grid-template-columns:1fr!important}.video-guide{border-radius:22px}
+  .transformation{padding:17px;border-radius:24px}.transformation-head{display:block;margin-bottom:15px}
+  .transformation-head h3{font-size:2.55rem}.transformation-head p{margin-top:10px;font-size:.88rem}
+  .ba-grid{gap:7px}.ba-video{border-radius:15px}.ba-label{top:7px;left:7px;padding:5px 7px;font-size:.52rem}
+  .footer h2{font-size:clamp(3rem,15vw,5.5rem)}.footer-bottom{margin-top:45px}
+}
+
+
+/* Compact before/after examples */
+.results-compact{padding-top:84px;padding-bottom:92px}
+.results-compact .section-head{margin-bottom:24px}
+.results-intro{max-width:720px;color:#8f9bad;line-height:1.65;margin:0 0 28px}
+.results-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.result-pair{border:1px solid var(--line);border-radius:24px;padding:16px;background:rgba(255,255,255,.02)}
+.result-name{font-size:.7rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#8d9aab;margin:0 0 10px 2px}
+.result-videos{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.result-video{position:relative;overflow:hidden;border-radius:16px;background:#05070b;aspect-ratio:9/16}
+.result-video video{display:block;width:100%;height:100%;object-fit:cover}
+.result-video span{position:absolute;z-index:2;top:8px;left:8px;padding:5px 7px;border-radius:999px;background:rgba(7,10,16,.7);backdrop-filter:blur(10px);font-size:.5rem;font-weight:850;letter-spacing:.09em;text-transform:uppercase}
+.result-video span.after{color:var(--lime)}
+
+@media(max-width:760px){
+  .results-compact{padding-top:64px;padding-bottom:72px}
+  .results-grid{grid-template-columns:1fr;gap:12px}
+  .result-pair{padding:12px;border-radius:20px}
+  .result-videos{gap:6px}
+  .result-video{border-radius:14px}
+}
+
+</style></head><body><div class="ambient"></div><div class="grid"></div>
+<nav><a class="brand" href="#top"><img src="assets/images/logo.jpeg" alt="JG">Jacobo Golf</a><div class="links"><a href="#coaching">Online coaching</a><a href="#inperson">In person</a><a href="#analysis">How it works</a></div><a class="pill" href="https://www.instagram.com/" target="_blank">Message me ↗</a></nav>
+<main id="top"><section class="hero wrap"><div class="reveal"><div class="eyebrow">Golf coaching · Personalised swing analysis</div><h1>Understand<span>your swing.</span><em>Play better.</em></h1><p>I don't want to patch one position at a time. I want to find the root cause of your miss, explain why it's happening, and give you a clear way to change it.</p><div class="actions"><a class="btn primary" href="#coaching">Work with me →</a><a class="btn" href="#analysis">See how it works</a></div></div><div class="hero-media reveal"><div class="phone"><video autoplay muted loop playsinline preload="metadata"><source src="assets/video/driver-positions.mp4" type="video/mp4"></video></div><div class="badge b1"><small>Focus</small><b>Root cause</b></div><div class="badge b2"><small>Then</small><b>Simple drills</b></div></div></section>
+<section id="coaching" class="section wrap"><div class="head reveal"><div class="index">01 — Coaching</div><h2>Choose how you want to <em>improve.</em></h2></div><div class="services">
+
+<div class="service-group reveal"><div class="label">Online coaching</div><h3>Start with the cause. <em>Then build the change.</em></h3></div>
+
+<article class="card featured reveal"><div class="kicker">Online · One-off</div><div class="price">€50</div><h3>Personal swing analysis</h3><p>Send me your swing and I’ll break it down step by step, identify the root cause behind the problem you’re seeing and show you exactly what to work on next.</p><ul class="checks"><li>Personalised video analysis of your swing</li><li>Root cause of your slice, hook, strike or distance issue</li><li>Second video showing you exactly what to change</li><li>Drills for your next practice sessions</li></ul><a class="btn primary" href="#analysis">Send my swing →</a></article>
+
+<article class="card featured reveal" style="grid-column:span 2"><div class="kicker">Online coaching · Ongoing</div><div class="price">€150 <small>/ month</small></div><h3>Weekly swing coaching</h3><p>We start with the complete analysis, then you send me your swing every week. I follow the change closely, check whether the new movement is actually happening, adjust the drills and tell you what to prioritise next.</p><p>Because understanding the change is only the first step. The difficult part is knowing whether you’re doing it correctly while your swing evolves — and that’s where close supervision makes the biggest difference.</p><ul class="checks"><li>Initial full swing analysis</li><li>One swing check-in every week</li><li>Drills adjusted as your movement changes</li><li>A clear priority at every stage</li></ul><a class="btn primary" href="#analysis">Start coaching →</a></article>
+
+<div id="inperson" class="service-group reveal"><div class="label">In-person coaching</div><h3>Work on it <em>together.</em></h3></div>
+
+<article class="card reveal"><div class="kicker">In person · 60 min</div><div class="price">€50</div><h3>Range lesson</h3><p>A one-to-one session focused on what is actually limiting your ball flight and consistency.</p><ul class="checks"><li>60-minute private lesson</li><li>Clear diagnosis and priorities</li><li>Drills to take into practice</li></ul><a class="btn primary" href="https://www.instagram.com/" target="_blank">Message me →</a><p class="note">We arrange day, time and payment directly.</p></article>
+
+<article class="card featured reveal" style="grid-column:span 2"><div class="kicker">In person · TrackMan · 60 min · Deep dive</div><div class="price">€90</div><h3>TrackMan deep dive</h3><p>For players who want to go further than a normal lesson and understand exactly what the club and ball are doing. We combine your swing with TrackMan data to separate feel from reality and pinpoint what is creating your pattern.</p><div class="trackman-data"><span>CLUB PATH</span><span>FACE ANGLE</span><span>STRIKE</span><span>LAUNCH</span><span>BALL FLIGHT</span></div><ul class="checks"><li>Full swing and ball-flight diagnosis</li><li>TrackMan club and launch data</li><li>Connect the numbers to what you feel in the swing</li><li>Clear changes and drills to take away</li></ul><p><strong>Best for:</strong> stubborn misses, bigger swing changes, distance optimisation — or anyone who wants to really go to town on their swing.</p><a class="btn primary" href="https://www.instagram.com/" target="_blank">Message me →</a><p class="note">We arrange day, time and payment directly.</p></article>
+
+</div></section>
+<section id="analysis" class="section wrap"><div class="head reveal"><div class="index">02 — Swing analysis</div><h2>Two angles. One clear <em>plan.</em></h2></div><div class="analysis"><div class="guide reveal"><video autoplay muted loop playsinline preload="metadata" aria-label="Face-on and down-the-line filming guide"><source src="assets/video/dtl-faceon.mp4" type="video/mp4"></video></div><div class="deliver reveal"><div class="kicker">What to send · What you receive</div><h3>Film it right. I’ll do the rest.</h3><div class="step"><b>01</b><div><h4>Down the line</h4><p>Slow motion, camera at hand height, around 3–4 metres away, pointing towards your hands at address. Full body and club visible throughout.</p></div></div><div class="step"><b>02</b><div><h4>Face on</h4><p>Slow motion, camera at hand height, around 3–4 metres away. Full body and the complete swing visible.</p></div></div><div class="step"><b>03</b><div><h4>Your analysis</h4><p>You receive a personalised video going through your swing step by step and explaining the root cause behind the problem you are seeing.</p></div></div><div class="step"><b>04</b><div><h4>Your drills</h4><p>You receive a second video of me demonstrating what to do with your body and club, plus the drills I want you to use in your next practice sessions.</p></div></div><div class="quote">Before payment, I check that your videos are good enough to analyse. Once everything is clear, you complete payment and I get to work.</div><div class="actions"><a class="btn primary" href="#" data-placeholder="tally">Upload my swing →</a><a class="btn" href="https://www.instagram.com/reel/DbYfWAgsVIc/" target="_blank">Watch swing positions ↗</a></div></div></div></section>
+
+
+
+<section id="results" class="section wrap results-compact">
+  <div class="section-head reveal">
+    <div class="section-index">03 — A few examples</div>
+    <h2 class="section-title">Small changes. <em>Better patterns.</em></h2>
+  </div>
+  <p class="results-intro reveal">A couple of examples from players I’ve worked with. Just simple before / after swings — the focus is always on improving the pattern, not chasing a picture-perfect position.</p>
+
+  <div class="results-grid reveal">
+    <article class="result-pair">
+      <div class="result-name">Marina</div>
+      <div class="result-videos">
+        <div class="result-video">
+          <span>Before</span>
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="assets/video/marina_before.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="result-video">
+          <span class="after">After</span>
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="assets/video/marina_after.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </article>
+
+    <article class="result-pair">
+      <div class="result-name">Tarsha</div>
+      <div class="result-videos">
+        <div class="result-video">
+          <span>Before</span>
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="assets/video/tarsha_before.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="result-video">
+          <span class="after">After</span>
+          <video autoplay muted loop playsinline preload="metadata">
+            <source src="assets/video/tarsha_after.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<footer class="footer wrap reveal"><h2>Want me to look at<span>your swing?</span></h2><p>For in-person lessons, message me and we'll arrange it directly. For online analysis, send the two angles above and tell me what you're struggling with.</p><div class="actions"><a class="btn primary" href="#analysis">Send my swing →</a><a class="btn" href="https://www.instagram.com/" target="_blank">Message me on Instagram ↗</a></div><div class="bottom"><span>Jacobo Golf · 2026</span><span>Coaching · Swing analysis · Better golf</span></div></footer></main>
+<script>const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.1});document.querySelectorAll('.reveal').forEach(x=>io.observe(x));
+const brandToggle=document.getElementById('brandToggle'),brandMenu=document.getElementById('brandMenu');
+if(brandToggle&&brandMenu){
+ const closeMenu=()=>{brandMenu.classList.remove('open');brandToggle.setAttribute('aria-expanded','false')};
+ brandToggle.addEventListener('click',e=>{e.stopPropagation();const isOpen=brandMenu.classList.toggle('open');brandToggle.setAttribute('aria-expanded',isOpen?'true':'false')});
+ brandMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+ document.addEventListener('click',e=>{if(!brandMenu.contains(e.target)&&!brandToggle.contains(e.target))closeMenu()});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
+}
+</script></body></html>
